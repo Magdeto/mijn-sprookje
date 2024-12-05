@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replicate Test Environment</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <!-- Heroes, villains, and genres buttons -->
+    <section class="choices">
+      <button class="hero button show" data-name="Snow White">
+        <img src="./assets/example-images/hero-1.png" width="20%" />
+      </button>
+      <button class="hero button show" data-name="Tinkerbell">
+        <img src="./assets/example-images/hero-2.png" width="20%" />
+      </button>
+      <button class="villain button" data-name="Evil Queen">
+        <img src="./assets/example-images/villain-1.png" width="20%" />
+      </button>
+      <button class="villain button" data-name="Captain Hook">
+        <img src="./assets/example-images/villain-2.png" width="20%" />
+      </button>
+      <button class="genre button" data-name="Comedy">
+        <img src="./assets/example-images/genre-1.jpg" width="20%" />
+      </button>
+      <button class="genre button" data-name="Adventure">
+        <img src="./assets/example-images/genre-2.png" width="20%" />
+      </button>
+    </section>
+
+    <!-- Section to display story's generated text and images -->
+    <main class="story" id="story">
+        <p id="text"></p>
+    </main>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

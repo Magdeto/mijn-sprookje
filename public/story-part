@@ -1,0 +1,72 @@
+AI Question
+                <p id="question-text" class="generated-text">
+                    <!-- Placeholder for AI-generated question -->
+                    Roodkapje neemt een mand met koekjes.
+                </p>
+
+                <!-- User Choices -->
+                <div class="user-choices">
+                    <!-- Option 1 -->
+                    <div class="choice-full">
+                        <div class="choice">
+                            <img src="pictures/choice1.png" alt="Choice 1">
+                        </div>
+                        <p>Choice 1 Explanation</p>
+                    </div>
+
+
+                    <!-- Option 2 -->
+                    <div class="choice-full">
+                        <div class="choice">
+                            <img src="pictures/choice2.png" alt="Choice 2">
+                        </div>
+                        <p>Choice 2 Explanation</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stop Generating Button -->
+            <div class="stop-btn-container">
+                <button class="stop-btn">
+                    <img src="pictures/stop-icon.png" alt="Stop">
+                </button>
+                <p>Stop</p>
+            </div>
+
+            <!-- Generated Result -->
+            <div class="final-output hidden">
+                <!-- Final Image and Text -->
+                <div class="generated-image">
+                    <img src="pictures/placeholder-image.png" alt="Final AI Image" class="final-image">
+                </div>
+                <p class="final-text">Result based on user choice</p>
+            </div>
+
+            <!-- Character Section -->
+            <div class="character-section hidden">
+                <img src="pictures/character-image1.png" alt="Character" class="character-image">
+                <div class="talk-button">
+                    <button class="talk-btn">
+                        <img src="pictures/mic.png" alt="Microphone">
+                    </button>
+                </div>
+                <p id="mic-text">Praat hier</p>
+            </div>
+
+
+            <!-- SAVE STORY? -->
+            <div id="save-story-question">
+                <h2 class="save-story">Verhaal bewaren?</h1>
+            </div>
+
+            <div class="content">
+                <div class="generated-image">
+                    <img src="pictures/placeholder-image.png" alt="save-image">
+                </div>
+            </div>
+
+            <section class="yes-no">
+                <img src="pictures/thumbs-up.png" alt="thumbs-up">
+                <img src="pictures/thumbs-up.png" id="thumbs-down">
+            </section>

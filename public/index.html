@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <title>Mijn Sprookje</title>
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+<link rel="manifest" href="../manifest.json">
+<link rel="servive-worker" href="../service-worker.js">
+</head>
+<script> 
+    if("serviceWorker" in navigator){
+      navigator.serviceWorker.register("../service-worker.js").then(function(registering){
+        // Registration was successful
+        console.log("Browser: Service Worker registration is successful with the scope",registering.scope);
+      }).catch(function(error){
+        //The registration of the service worker failed
+        console.log("Browser: Service Worker registration failed with the error",error);
+      });
+    } else {
+      //The registration of the service worker failed
+      console.log("Browser: I don't support Service Workers :(");
+    }
+    let installPrompt; //Variable to store the install action in
+  window.addEventListener("beforeinstallprompt",(event)=>{	
+      event.preventDefault(); //Prevent the event (this prevents the default bar to show up)
+      installPrompt=event; //Install event is stored for triggering it later
+      //...do something here to show your install button
+  });
+  //Recognize the install variable from before?
+  installPrompt.prompt();
+  //..Put code here that hides your install button
+  installPrompt.userChoice.then((choiceResult)=>{
+    //Hide the install button here again
+    if(choiceResult.outcome!=="accepted"){
+      //..If it was not accepted to install than show the install button again
+    }
+    installPrompt=null;
+  });
+    </script>
+<body>
+    <!-- Achtergrond video -->
+    <video autoplay muted loop id="background-video">
+        <source src="pictures/copy_92C26845-AE96-42F1-A021-7BD7AB73C1AB.MP4" type="video/mp4">
+        Je browser ondersteunt geen video-element.
+    </video>
+
+    <div class="overlay">
+        <!-- Logo bovenaan -->
+        <div class="logo-container">
+            <img src="pictures/logo svglogo.png" alt="Efteling Logo" class="logo">
+        </div>
+    
+        <div class="text-container">
+            <h2>Welkom bij</h2>
+            <h2>Mijn Sprookje</h2>
+            <br> <br>
+            <h1>Waar jouw eigen</h1>
+            <h1>Avontuur begint!</h1>
+        </div>
+        
+        <!-- Knop in het midden onder de tekst -->
+        <div class="button-container">
+            <a href="storytelling.html"><button>Maak een verhaal</button></a>
+        </div>
+        
+        <div class="sound-control" onclick="toggleSound()">
+            <!-- Geluid Aan -->
+            <div id="sound-on">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#D64032">
+                    <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+                    <path d="M14.5 11.03a1 1 0 0 1 1.27-.67 4.5 4.5 0 0 1 0 8.66 1 1 0 0 1-.8-1.84 2.5 2.5 0 0 0 0-4.82 1 1 0 0 1-.47-1.33z"/>
+                    <path d="M14.5 4.03a1 1 0 0 1 1.27-.67 9.5 9.5 0 0 1 0 18.66 1 1 0 0 1-.8-1.84 7.5 7.5 0 0 0 0-14.82 1 1 0 0 1-.47-1.33z"/>
+                </svg>
+            </div>
+        
+            <!-- Geluid Uit -->
+            <div id="sound-off" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#D64032">
+                    <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+                    <path d="M16.24 3.56l1.42 1.42L4.98 17.66l-1.42-1.42z"/>
+                </svg>
+            </div>
+        </div>
+        
+    
+
+    <!-- Script voor geluidsbediening kun je aparte js doen  -->
+    <script>
+        const video = document.getElementById('background-video');
+        const soundOnIcon = document.getElementById('sound-on');
+        const soundOffIcon = document.getElementById('sound-off');
+
+        function toggleSound() {
+            if (video.muted) {
+                video.muted = false;
+                soundOnIcon.style.display = "block";  // Toon geluid aan icoon
+                soundOffIcon.style.display = "none";  // Verberg geluid uit icoon
+            } else {
+                video.muted = true;
+                soundOnIcon.style.display = "none";  // Verberg geluid aan icoon
+                soundOffIcon.style.display = "block";  // Toon geluid uit icoon
+            }
+        }
+    </script>
+</body>
+</html>   
+</body>
+</html>

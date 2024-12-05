@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Mijn Sprookje</title>
+    <link rel="stylesheet" href="styles/storytelling.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Marhey:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Section: Genres -->
+    <section id="genres-section" class="active">
+        <div class="header-container">
+            <a href="index.html" class="round-nav knop-terug">
+                <i class="fas fa-home"></i>
+            </a>
+            <img src="pictures/logo svglogo.png" alt="Efteling logo" class="logo">
+            <button class="round-nav knop-instellingen">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+        <h1>Kies je verhaal?</h1>
+        <div class="grid">
+            <!-- Eerste rij -->
+            <div class="knop-wrapper">
+                <div class="knop genre knop-avontuur" data-name="Avontuur" data-bg="#e53935">
+                    <img src="genres-photo/pngtree-adventure-line-icon-vect.png" alt="Avontuur Icoon" class="icon">
+                    <span>Avontuur</span>
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop genre knop-liefde" data-name="Liefde" data-bg="#ff7043">
+                    <img src="genres-photo/lief.png" alt="Liefde Icoon" class="icon">
+                    <span>Liefde</span>
+                </div>
+            </div>
+        
+            <!-- Tweede rij -->
+            <div class="knop-wrapper">
+                <div class="knop genre knop-griezelig" data-name="Griezelig">
+                    <img src="genres-photo/Bang.png" alt="Griezelig Icoon" class="icon">
+                    <span>Griezelig</span>
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop genre knop-droevig" data-name="Droevig">
+                    <img src="genres-photo/droevig.png" alt="Droevig Icoon" class="icon">
+                    <span>Droevig</span>
+                </div>
+            </div>
+        
+            <!-- Derde rij -->
+            <div class="knop-wrapper">
+                <div class="knop genre knop-magie" data-name="Magie">
+                    <img src="genres-photo/magie.png" alt="Magie Icoon" class="icon">
+                    <span>Magie</span>
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop genre knop-grappig" data-name="Grappig">
+                    <img src="genres-photo/grappig.png" alt="Grappig Icoon" class="icon">
+                    <span>Grappig</span>
+                </div>
+            </div>
+        </div>
+        <a href="#" id="to-personagesgood" class="next-knop">Verder gaan</a>
+    </section>
+
+
+    <!-- Section: Good characters -->
+    <section id="personagesgood-section">
+        <div class="header-container">
+            <a href="#" class="round-nav knop-terug" id="back-to-genres">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <img src="pictures/logo svglogo.png" alt="Efteling logo" class="logo">
+            <button class="round-nav knop-instellingen">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+        <div class="header-text">
+            <p>Wie wil jij als jouw</p>
+            <p>verhaalvriend?</p>
+            <p class="subtext">Kies je held hier!</p>
+        </div>
+
+        <div class="grid">
+            <!-- Eerste rij -->
+            <div class="knop-wrapper">
+                <div class="knop hero knop-roodkapje" data-name="Roodkapje">
+                    <img src="personages-bad/700x610-roodkapje-profiel.png" alt="Roodkapje Icoon" class="icon">
+                    
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop hero knop-pardoesvrouw" data-name="Pardoes Vrouw">
+                    <img src="personages-bad/700x610-pardijn-profiel.png" alt="Pardoes Vrouw Icoon" class="icon">
+                    
+                </div>
+            </div>
+
+            <div class="knop-wrapper">
+                <div class="knop hero knop-pardoesman" data-name="Pardoes Man">
+                    <img src="personages-bad/700x610-pardoes-profiel.png" alt="Pardoes Man Icoon" class="icon">
+                   
+                </div>
+            </div>
+            
+            <!-- Tweede rij -->
+            <div class="knop-wrapper">
+                <div class="knop hero knop-langnek" data-name="Langnek">
+                    <img src="personages-bad/700x610-langnek-profiel.png" alt="langnek Icoon" class="icon">
+                 
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop hero knop-dwerg" data-name="Dwerg">
+                    <img src="personages-bad/700x610-keu-profiel.png" alt="dwerg Icoon" class="icon">
+                
+                </div>
+            </div>
+
+            <div class="knop-wrapper">
+                <div class="knop hero knop-doorneroosje" data-name="Doorneroosje">
+                    <img src="personages-bad/700x610-assepoester-profiel.png" alt="doorneroosje Icoon" class="icon">
+                   
+                </div>
+            </div>
+
+           <!-- Derde rij -->
+            <div class="knop-wrapper">
+                <div class="knop hero knop-kleinduimpje" data-name="Kleinduimpje">
+                    <img src="personages-bad/700x610-klein-duimpje-profiel.png" alt="kleinduimpje Icoon" class="icon">
+                   
+                </div>
+            </div>  
+            
+            <div class="knop-wrapper">
+                <div class="knop hero knop-geit" data-name="Geit">
+                    <img src="personages-bad/700x610-zeven-geitjes-profiel.png" alt="geit Icoon" class="icon">
+                  
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop hero knop-ezel" data-name="Ezel">
+                    <img src="personages-bad/700x610-ezel-profiel.png" alt="ezel Icoon" class="icon">
+                    
+                </div>
+            </div>
+        </div>
+
+            <div class="next-knop-container">
+                <a href="#" id="to-ba" class="next-knop">Verder gaan</a>
+            </div>
+        
+    </section>
+    
+   
+    <!-- Section: Bad characters -->
+    <section id="ba-section">
+        <div class="header-container">
+            <a href="#" class="round-nav knop-terug" id="back-to-personagesgood">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <img src="pictures/logo svglogo.png" alt="Efteling logo" class="logo">
+            <button class="round-nav knop-instellingen">
+                <i class="fas fa-cog"></i>
+            </button>
+        </div>
+        <div class="header-text">
+            <p>Wie wordt de slechterik  <p>
+            <p>in jouw verhaal?</p>
+            <p class="subtext">Kies hier je boef!</p>
+        </div>
+        <div class="grid">
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Reus">
+                    <img src="personages-bad/700x610-reus-profiel.png" alt="Reus" class="icon">
+                
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Heks">
+                    <img src="personages-bad/700x610-heks-profiel.png" alt="heks" class="icon">
+                    
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Rattar">
+                    <img src="personages-bad/700x610-rattar-profiel.png" alt="rattar" class="icon">
+                
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Draak">
+                    <img src="personages-bad/700x610-draak-profiel.png" alt="draak" class="icon">
+                
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Pantagor">
+                    <img src="personages-bad/700x610-pantagor-profiel.png" alt="pantagor" class="icon">
+                    
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Wolf">
+                    <img src="personages-bad/700x610-wolf-profiel.png" alt="wolf" class="icon">
+            
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Almar">
+                    <img src="personages-bad/700x6100-almar-profiel.png" alt="almar" class="icon">
+            
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Fakir">
+                    <img src="personages-bad/700x610-fakir-profiel.png" alt="fakir" class="icon">
+                
+                </div>
+            </div>
+            <div class="knop-wrapper">
+                <div class="knop villain" data-name="Polle">
+                    <img src="personages-bad/700x610-polle-profiel.png" alt="polle" class="icon">
+                
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="next-knop-container">
+            <a href="#" id="go-to-verhaal" class="next-knop">Verder gaan</a>
+
+        </div>    
+    </section>
+
+
+    <!------------------------------- Story generation section -------------------------->
+
+    <!-- loading animation  -->
+    <section id="loading-screen">
+        <img src="./pictures/magic-tree.png" alt="loading-image" class="bouncing-image">
+        <p>Avontuur wacht...</p>
+    </section>
+    <!-- story output section -->
+    <section id="verhaal-section">
+        <div class="container">
+            <!-- Settings Button -->
+            <button class="settings-btn">
+            <img src="pictures/setting.png" alt="Settings">
+        </button>
+
+            <!-- Logo Section -->
+            <div class="logo">
+                <img src="pictures/logo.png" alt="Website Logo">
+            </div>
+
+            <!-- AI Generated Content -->
+            <div class="content" id="story-container">
+            </div>
+            <div class="character-section hidden">
+                <img src="pictures/character-image1.png" alt="Character" class="character-image">
+                <div class="talk-button">
+                    <button class="talk-btn">
+                        <img src="pictures/mic.png" alt="Microphone">
+                    </button>
+                </div>
+                <p id="mic-text">Praat hier</p>
+            </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
