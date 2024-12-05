@@ -1,0 +1,1266 @@
+/* General body settings */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* Background image */
+
+body {
+  background-image: url("../pictures/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
+
+  /* loading animation while story is generated */
+  .bouncing-image {
+    animation: bounce 6s infinite ease-in-out;
+  }
+  @keyframes bounce {
+      0%, 100% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(60px);
+      }
+      }
+      
+      #loading-screen > p {
+          font-size: 36px;
+          text-align: center;
+          font-family: "Marhey", sans-serif;
+          margin-top: -2rem;                
+      }
+
+/* Header container for buttons and logo */
+#genres-section .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Logo */
+#genres-section .logo {
+  width: 220px;
+}
+
+/* Style for round navigation buttons */
+#genres-section .round-nav {
+  background: #b71c1c;
+  color: white;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#genres-section .round-nav:hover {
+  background: #a21717;
+}
+
+/* Title */
+#genres-section h1 {
+  color: #b71c1c;
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-family: "Marhey", sans-serif;
+  font-weight: 100;
+}
+
+/* Genres Section Styling */
+#genres-section {
+  padding: 30px;
+  text-align: center;
+}
+
+/* Grid layout for genre buttons */
+#genres-section .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1100px;
+  font-family: "Marhey", sans-serif;
+}
+
+/* Knop wrapper for genre buttons */
+#genres-section .knop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b39f73;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 160px;
+  height: 160px;
+  border: solid 3px #a21717;
+  padding: 4px;
+  overflow: hidden;
+  transition: background-color 0.1s ease-in-out;
+}
+
+/* Genre button */
+#genres-section .knop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  width: 190px;
+  clip-path: polygon(
+    23% 0%,
+    77% 0%,
+    100% 25%,
+    100% 75%,
+    77% 100%,
+    23% 100%,
+    0% 75%,
+    0% 25%
+  );
+  background-color: #ff7043; /* Default color */
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Icon styling */
+#genres-section .icon {
+  width: 60px;
+  height: auto;
+}
+
+/* Specific button styles for different genres */
+#genres-section .knop-avontuur {
+  background-color: #e53935;
+}
+#genres-section .knop-liefde {
+  background-color: #ff7043;
+}
+#genres-section .knop-griezelig {
+  background-color: #42a5f5;
+}
+#genres-section .knop-droevig {
+  background-color: #66bb6a;
+}
+#genres-section .knop-magie {
+  background-color: #ffca28;
+}
+#genres-section .knop-grappig {
+  background-color: #ec407a;
+}
+
+/* Next button styling */
+#genres-section .next-knop {
+  display: inline-block;
+  background-color: #d2691e;
+  color: white;
+  padding: 10px 90px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 28px;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+/* Responsive Layout for Tablets */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #genres-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #genres-section .knop-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+  #genres-section .knop {
+    width: 200px;
+    height: 200px;
+  }
+  #genres-section .next-knop {
+    font-size: 45px;
+    padding: 15px 130px;
+  }
+
+  #genres-section h1 {
+    font-size: 45px;
+  }
+
+  #genres-section .logo {
+    width: 209px;
+    margin-top: 85px;
+  }
+
+  #genres-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+/* Responsive Layout for Phones */
+@media (max-width: 480px) {
+  #genres-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  #genres-section .knop-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  #genres-section .knop {
+    width: 130px;
+    height: 130px;
+    font-size: 14px;
+  }
+
+  #genres-section .next-knop {
+    font-size: 22px;
+    padding: 10px 50px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  #genres-section .icon {
+    width: 70px;
+    height: auto;
+  }
+
+  #genres-section h1 {
+    font-size: 45px;
+  }
+
+  #genres-section .logo {
+    width: 209px;
+    margin-top: 85px;
+  }
+
+  #genres-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 99px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+}
+
+/* Responsive Grid layout for phone */
+@media (max-width: 758px) {
+  #genres-section .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  #genres-section .knop-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  #genres-section .knop {
+    width: 130px;
+    height: 130px;
+    font-size: 14px;
+  }
+
+  #genres-section .next-knop {
+    font-size: 35px;
+    padding: 5px 70px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  #genres-section .icon {
+    width: 70px;
+    height: auto;
+  }
+
+  #genres-section h1 {
+    font-size: 45px;
+  }
+
+  #genres-section .logo {
+    width: 230px;
+    margin-top: 15px;
+  }
+
+  #genres-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 14px;
+  }
+}
+
+/* Achtergrondafbeelding alleen voor de personagesgood sectie */
+#personagesgood-section {
+  background-image: url("/pictures/Scherm_afbeelding\ 2024-11-07\ om\ 11.18.55-1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+/* Header container voor knoppen en logo */
+#personagesgood-section .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Logo */
+#personagesgood-section .logo {
+  width: 220px;
+}
+
+/* Stijl voor ronde navigatieknoppen */
+#personagesgood-section .round-nav {
+  background: #b71c1c;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Titel */
+#personagesgood-section .header-text {
+  text-align: center;
+  font-family: "Marhey", sans-serif;
+  margin: 20px 0;
+}
+
+/* Opmaak voor de hoofdtekst */
+#personagesgood-section .header-text p {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  color: #b71134;
+  margin: 0;
+}
+
+/* Specifieke opmaak voor de subtekst */
+#personagesgood-section .header-text .subtext {
+  font-size: 1.9rem;
+  font-weight: lighter;
+  color: #771a2d;
+  margin-top: 10px;
+}
+
+#personagesgood-section .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+/* Knop wrapper */
+#personagesgood-section .knop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b39f73;
+  border-radius: 12px;
+  border: 3px solid #b71c1c;
+  width: 127px;
+  height: 127px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Knop stijl */
+#personagesgood-section .knop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon style */
+#personagesgood-section .icon {
+  width: 90px; /* Breedte van de iconen */
+  height: auto;
+}
+
+#personagesgood-section .next-knop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#personagesgood-section .next-knop {
+  background-color: #d2691e;
+  color: white;
+  padding: 10px 90px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 28px;
+  text-decoration: none;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #personagesgood-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  #personagesgood-section .knop-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  #personagesgood-section .icon {
+    width: 190px;
+  }
+
+  #personagesgood-section .icon {
+    width: 184px; /* Middelgrote iconen */
+    margin-top: 27px;
+  }
+}
+
+/* Responsieve styling voor telefoons */
+@media (max-width: 480px) {
+  #personagesgood-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  #personagesgood-section .knop-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  #personagesgood-section .icon {
+    width: 194px;
+    margin-top: 20px;
+  }
+
+  #personagesgood-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 60px;
+  }
+
+  #personagesgood-section .logo {
+    width: 209px;
+    margin-top: 35px;
+  }
+}
+
+/* Responsieve styling voor iPad Pro, Air, en Mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #personagesgood-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #personagesgood-section .knop-wrapper {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    border: 4px solid #b71134;
+  }
+
+  #personagesgood-section .icon {
+    width: 210px; /* Middelgrote iconen */
+    margin-top: 10px;
+  }
+
+  #personagesgood-section .round-nav {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+  }
+
+  #personagesgood-section .header-text p {
+    font-size: 3.2rem;
+  }
+
+  #personagesgood-section .header-text .subtext {
+    font-size: 3rem;
+  }
+
+  #personagesgood-section .next-knop {
+    padding: 12px 140px;
+    font-size: 45px;
+  }
+
+  #personagesgood-section .logo {
+    width: 355px;
+    margin-top: 20px;
+  }
+
+  #personagesgood-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 56px;
+    border: none;
+    border-radius: 50%;
+    width: 99px;
+    height: 99px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 60px;
+  }
+
+  #personagesgood-section .icon {
+    width: 346px;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #personagesgood-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  #personagesgood-section .knop-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  #personagesgood-section .icon {
+    width: 100px;
+  }
+
+  #personagesgood-section .header-text p {
+    font-size: 4.4rem;
+  }
+
+  #personagesgood-section .header-text .subtext {
+    font-size: 4rem;
+  }
+
+  #personagesgood-section .next-knop {
+    padding: 6px 130px;
+    font-size: 62px;
+  }
+
+  #personagesgood-section .logo {
+    width: 390px;
+    margin-top: 50px;
+  }
+
+  #personagesgood-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 55px;
+    border: none;
+    border-radius: 50%;
+    width: 159px;
+    height: 159px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 70px;
+  }
+
+  #personagesgood-section .icon {
+    width: 500px; /* Middelgrote iconen */
+    margin-top: 80px;
+  }
+}
+
+/* Specifieke styling voor de iPhone 14 Pro Max */
+@media screen and (device-width: 430px) and (device-height: 932px) and (orientation: portrait) {
+  #personagesgood-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  #personagesgood-section .knop-wrapper {
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+  }
+
+  #personagesgood-section .icon {
+    width: 190px;
+  }
+
+  #personagesgood-section .header-text p {
+    font-size: 2.2rem;
+  }
+
+  #personagesgood-section .header-text .subtext {
+    font-size: 2rem;
+  }
+
+  #personagesgood-section .next-knop {
+    font-size: 28px;
+    padding: 10px 80px;
+  }
+}
+
+#ba-section {
+  background-image: url("/pictures/Scherm_afbeelding\ 2024-11-07\ om\ 11.18.55-1.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+/* Header container voor knoppen en logo */
+#ba-section .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Logo */
+#ba-section .logo {
+  width: 220px;
+}
+
+/* Stijl voor ronde navigatieknoppen */
+#ba-section .round-nav {
+  background: #b71c1c;
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Titel */
+#ba-section .header-text {
+  text-align: center;
+  font-family: "Marhey", sans-serif;
+  margin: 20px 0;
+}
+
+/* Opmaak voor de hoofdtekst */
+#ba-section .header-text p {
+  font-size: 2.3rem;
+  line-height: 1.2;
+  color: #b71134;
+  margin: 0;
+}
+
+/* Specifieke opmaak voor de subtekst */
+#ba-section .header-text .subtext {
+  font-size: 1.9rem;
+  font-weight: lighter;
+  color: #771a2d;
+  margin-top: 10px;
+}
+
+#ba-section .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+/* Knop wrapper */
+#ba-section .knop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b39f73;
+  border-radius: 12px;
+  border: 3px solid #b71c1c;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Knop stijl */
+#ba-section .knop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon style */
+#ba-section .icon {
+  width: 90px;
+  height: auto;
+}
+
+/* Container voor de 'Verder gaan' knop */
+#ba-section .next-knop-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+#ba-section .next-knop {
+  background-color: #d2691e;
+  color: white;
+  padding: 10px 90px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 28px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Responsieve styling voor kleinere schermen */
+@media (max-width: 768px) {
+  #ba-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  #ba-section .knop-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  #ba-section .icon {
+    width: 190px;
+  }
+
+  #ba-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 60px;
+  }
+
+  #ba-section .logo {
+    width: 209px;
+    margin-top: 35px;
+  }
+
+  #ba-section .icon {
+    width: 180px; /* Breedte van de iconen */
+    height: auto;
+  }
+}
+
+/* Responsieve styling voor grotere schermen (bijvoorbeeld tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #ba-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  #ba-section .knop-wrapper {
+    width: 190px; /* Middelgrote knoppen voor iPad */
+    height: 190px;
+    border-radius: 20px;
+    border: 4px solid #b71134;
+  }
+
+  #ba-section .icon {
+    width: 210px;
+    margin-top: 10px;
+  }
+
+  #ba-section .round-nav {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+  }
+
+  #ba-section .header-text p {
+    font-size: 3.2rem;
+  }
+
+  #ba-section .header-text .subtext {
+    font-size: 3rem;
+  }
+
+  #ba-section .next-knop {
+    padding: 12px 140px;
+    font-size: 45px;
+  }
+
+  #ba-section .logo {
+    width: 355px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+  #ba-section .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  #ba-section .knop-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  #ba-section .icon {
+    width: 100px;
+  }
+
+  #ba-section .header-text p {
+    font-size: 4.4rem;
+  }
+
+  #ba-section .header-text .subtext {
+    font-size: 4rem;
+  }
+
+  #ba-section .next-knop {
+    padding: 6px 130px;
+    font-size: 62px;
+  }
+
+  #ba-section .logo {
+    width: 390px;
+    margin-top: 50px;
+  }
+
+  #ba-section .round-nav {
+    background: #b71c1c;
+    color: white;
+    font-size: 55px;
+    border: none;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 70px;
+  }
+
+  #ba-section .icon {
+    width: 900px;
+    height: auto;
+  }
+}
+
+/* ------------------------------------------------------ */
+
+/* FONTS */
+@font-face {
+  font-family: "alconica";
+  src: url("../fonts/Aclonica-Regular.woff") format("woff");
+  src: url("../fonts/Aclonica-Regular.woff2") format("woff2");
+}
+
+/* General Styling */
+.verhaal-section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  background-image: url("pictures/Sprookjesheld.png");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 375px; /* Mobile-first design */
+  /* background: #FFF; */
+  border-radius: 16px;
+  padding: 16px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "alconica";
+}
+
+/* Settings Button */
+.settings-btn {
+  /* position: absolute; */
+  position: relative;
+  top: 7px;
+  /* right: 16px; */
+  left: 200px;
+  background-color: #b71134;
+  border: none;
+  border-radius: 50%;
+  width: 57px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.settings-btn img {
+  width: 37px;
+  height: 37px;
+}
+
+.verhaal-back-button img {
+  width: 37px;
+  height: 37px;
+}
+
+/* Logo Section */
+.logo img {
+  /* margin: 10px; */
+  margin-top: -15px;
+  margin-bottom: 70px;
+  max-width: 85%;
+}
+
+/* Generated Content */
+.story-content {
+  width: 100%;
+  text-align: center;
+  scale: 1.2;
+}
+
+.generated-text {
+  font-size: 22px;
+  max-width: 70vw;
+  text-align: left;
+  margin: 25px 0;
+  margin-left: 20px;
+}
+
+.generated-image {
+  width: 95%;
+  background-color: #b39f73;
+  border: 3.5px solid #c03131;
+  border-radius: 20px;
+  margin-left: 6.5px;
+  display: flex;
+  justify-content: center;
+}
+
+.generated-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+
+/* User Choices */
+.user-choices {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.choice-full {
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.choice {
+  margin: 10px;
+  align-content: center;
+  height: 150px;
+  background-color: #b39f73;
+  border: 3.5px solid #c03131;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.choice img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.choice-full p {
+  /* font-size: 25px; */
+  margin-top: 4px;
+  color: #771a2d;
+}
+
+/* Stop Button */
+.stop-btn-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.stop-btn {
+  background-color: #b71134;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stop-btn img {
+  width: 33px;
+  height: 33px;
+}
+
+.stop-btn-container p {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+/* Final Output */
+.final-output {
+  width: 95%;
+  text-align: center;
+  scale: 1.25;
+}
+
+.final-output img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  /* margin: 8px 0; */
+}
+
+.final-output p {
+  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* Character Section */
+.character-section {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  transition: transform 3s ease;
+  transform: scale(1);
+}
+
+.hidden {
+  display: none;
+}
+
+.character-image {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  margin-left: 25px;
+}
+
+.talk-button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+.talk-btn {
+  background-color: #b71134;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.talk-btn img {
+  width: 43px;
+  height: 47px;
+  margin-top: 3px;
+}
+
+#mic-text {
+  font-size: 17px;
+  margin-top: 15px;
+  color: #b71134;
+}
+
+.verhaal-section a img {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #b71134;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+p {
+  color: #771a2d;
+}
+
+.generated-text {
+  color: #771a2d;
+}
+
+#save-story-question {
+  font-size: 22px;
+  color: #771a2d;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  /* align-content: center; */
+  margin-bottom: 20px;
+}
+
+.save-story {
+  margin-left: 12px;
+}
+
+/* YES-NO SECTION */
+.yes-no {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  position: relative;
+  /* justify-content: center; */
+  align-content: center;
+  justify-content: space-around;
+}
+
+.yes-no img {
+  width: 90px;
+  background-color: #b71134;
+  border: none;
+  border-radius: 40%;
+  padding: 20px;
+  margin: 40px;
+  /* width: 70px; */
+  /* height: 70px; */
+}
+
+.yes-no #thumbs-down {
+  transform: rotate(180deg);
+}

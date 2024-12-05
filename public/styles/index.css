@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* Achtergrond video */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Overlay container */
+.overlay {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 20px;
+    color: #a61b1b;
+}
+
+/* Logo container en stijl */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+.logo {
+    max-width: 230px; 
+    width: 100%;
+}
+
+/* Text container met links uitgelijnde tekst */
+.text-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    width: 80%;
+    margin-top: 50px;
+    font-family: "Aclonica", sans-serif;
+    color: #C03131;
+}
+
+/* Stijl voor de kopjes */
+.text-container h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    color: #C03131;
+    margin: 0; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: "Aclonica", sans-serif;
+}
+
+/* Stijl voor de paragrafen */
+.text-container h1 {
+    font-size: 50px; 
+    color: #C03131;
+    margin: 0; /* Geen marges tussen de paragrafen */
+    text-shadow: 1px 1px 3px white(0, 0, 0, 0.5);
+    font-family: "Aclonica", sans-serif;
+    font-weight: 400;
+}
+
+/* Knop container en stijl */
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 90px;
+}
+
+.button-container button {
+    background-color: #C03131;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-shadow: 6px 3px 2px white(0, 0, 0, 0.7);
+    font-family: "Aclonica", sans-serif;
+}
+
+.button-container button:hover {
+    background-color: #851616;
+}
+
+/* Geluid control knop naar links onderaan */
+.sound-control {
+    position: fixed;
+    bottom: 20px; 
+    left: 20px; 
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.sound-control svg {
+    fill: #ffff; 
+    width: 40px;
+    height: 40px;
+    transition: fill 0.3s ease; 
+}
+
+.sound-control:hover svg {
+    fill: #ff0000; 
+}
+
+
+
+
+
+
+/* Voor tablets en kleinere laptops (maximaal 1024px) */
+@media (max-width: 1024px) {
+    /* Voor tablets en kleinere laptops */
+    .text-container h1 {
+        font-size: 36px;
+    }
+    
+    .text-container h2 {
+        font-size: 20px;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+    
+    .button-container button {
+        font-size: 1.3rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Voor smartphones en kleinere tablets zoals iPhone XR, 12 Pro en 14 Pro */
+@media (max-width: 768px) {
+    /* Voor smartphones en kleinere tablets */
+    .text-container h1 {
+        font-size: 31px; 
+    }
+    
+    .text-container h2 {
+        font-size: 42px;
+    }
+
+    .logo {
+        max-width: 280px;
+    }
+    
+    .button-container button {
+        font-size: 1.7rem;
+        padding: 20px 60px;
+    }
+}
+
+/* Voor iPhone XR, iPhone 12 Pro en vergelijkbare smartphones (max 414px) */
+@media (max-width: 414px) {
+    .text-container h1 {
+        font-size: 28px;
+    }
+
+    .text-container h2 {
+        font-size: 37px;
+    }
+
+    .logo {
+        max-width: 280px;
+    }
+
+    .button-container button {
+        font-size: 1.6rem;
+        padding: 15px 50px;
+    }
+
+    .sound-control {
+        position: fixed;
+        bottom: 15px;
+        left: 15px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .sound-control svg {
+        fill: #ffff;
+        width: 50px;
+        height: 50px;
+        transition: fill 0.3s ease;
+    }
+}
+
+
+
+
+/* Voor zeer kleine smartphones zoals iPhone SE en vergelijkbare telefoons (max 375px) */
+@media (max-width: 375px) {
+    .text-container h1 {
+        font-size: 25px; 
+    }
+    
+    .text-container h2 {
+        font-size: 35px;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    .button-container button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+
+    .sound-control {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .sound-control svg {
+        fill: #ffff;
+        width: 35px;
+        height: 35px;
+    }
+}
+

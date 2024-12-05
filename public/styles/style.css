@@ -1,0 +1,13 @@
+button {
+    display: none;
+
+    cursor: pointer;
+}
+
+.story {
+    display: none;
+}
+
+.show {
+    display: block;
+}
